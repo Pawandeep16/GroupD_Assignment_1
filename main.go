@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"runtime"
 )
 
 func main() {
@@ -13,35 +12,22 @@ func main() {
 	sum := a + b
 
 	fmt.Println(sum)
-	calculator()
+	swapNumbers()
 }
 
-func calculator() {
-	fmt.Println("Enter Your First Number: ")
+func swapNumbers() {
 
-	// var then variable name then variable type
-	var first int
-	fmt.Scanln(&first)
+	var number1, number2, number3 int
+	number1 = 16
+	number2 = 20
+	fmt.Println("Numbers before swapping: \n Number 1 =", number1, "\n Number 2 =", number2)
 
-	fmt.Println("Enter Your Second Number: ")
+	// swapping the numbers
+	number3 = number1
+	number1 = number2
+	number2 = number3
 
-	// var then variable name then variable type
-	var second int
-	fmt.Scanln(&second)
-
-	fmt.Println("Press 1 for add, 2 for multiply and 3 for substract")
-
-	switch os := runtime.GOOS; os {
-	case "1":
-		fmt.Println(first + second)
-	case "2":
-		fmt.Println(first * second)
-	case "3":
-		fmt.Println(first - second)
-	default:
-		// freebsd, openbsd,
-		// plan9, windows...
-		fmt.Printf("%s.\n", os)
-	}
+	// printing the numbers after swapping
+	fmt.Println("Numbers after swapping:\n Number 1 =", number1, "\n Number 2 =", number2, "\n(Swap within the function)")
 
 }
