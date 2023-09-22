@@ -13,8 +13,15 @@ func main() {
 
 	fmt.Println(sum)
 	swapNumbers()
+        weekdays()
 }
-
+// weekdaysfunction
+func weekdays() {
+  
+    // Using time.Now().Weekday() function.
+    dt := time.Now().Weekday()
+    fmt.Println(dt.String())
+}
 func swapNumbers() {
 
 	var number1, number2, number3 int
