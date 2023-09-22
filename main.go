@@ -18,11 +18,31 @@ func main() {
 	averageofthreenumbers()
 	Even_Odd()
 	switchFunction()
+	inputname()
 	
 	var val int64 = -25
 	fmt.Printf("Absolute value of %d is %d",val,GetIntAbs(val))
 }
-
+// function for input string
+func inputName(){
+fmt.Println("Enter Your First Name: ")
+  
+    // var then variable name then variable type
+    var fname string
+  
+    // Taking input from user
+    fmt.Scanln(&fname)
+    fmt.Println("Enter Second Last Name: ")
+    var lname string
+    fmt.Scanln(&lname)
+  
+    // Print function is used to
+    // display output in the same line
+    fmt.Print("Your Full Name is: ")
+  
+    // Addition of two string
+    fmt.Print(fname + " " + lname)
+}
 // weekdaysfunction
 func weekdays() {
 
