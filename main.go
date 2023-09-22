@@ -17,6 +17,7 @@ func main() {
 	weekdays()
 	averageofthreenumbers()
 	Even_Odd()
+	switchFunction()
 }
 
 // weekdaysfunction
@@ -65,4 +66,22 @@ func averageofthreenumbers() {
     avg=(num1+num2+num3)/3
     
     fmt.Println("Average is: ",avg)
+}
+
+
+func switchFunction() {
+    var val int=3
+    
+     switch val{ 
+       case 4-1: 
+            fmt.Println("INDIA") 
+       case 4-2: 
+            fmt.Println("USA") 
+       case 4-3: 
+            fmt.Println("UK") 
+       case 4-4: 
+            fmt.Println("CHINA")
+       default:  
+            fmt.Println("Invalid value") 
+   }  
 }
