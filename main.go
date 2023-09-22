@@ -18,6 +18,9 @@ func main() {
 	averageofthreenumbers()
 	Even_Odd()
 	switchFunction()
+	
+	var val int64 = -25
+	fmt.Printf("Absolute value of %d is %d",val,GetIntAbs(val))
 }
 
 // weekdaysfunction
@@ -84,4 +87,11 @@ func switchFunction() {
        default:  
             fmt.Println("Invalid value") 
    }  
+}
+
+func GetIntAbs(val int64) int64 {
+	if val < 0 {
+		return -val
+	}
+	return val
 }
